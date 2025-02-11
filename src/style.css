@@ -75,7 +75,7 @@ header {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* ✅ Custom Alert Box */
+/*  Custom Alert Box */
 #custom-alert {
   display: none; /* By default hidden */
   position: fixed;
