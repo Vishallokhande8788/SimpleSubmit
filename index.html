@@ -3,42 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Simple Submit</title>
-    <link rel="shortcut icon" href="ss.jpg" type="image/x-icon">
+    <title>Login Form</title>
     <link rel="stylesheet" href="src/style.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Simple Submit</h1>
-    </header>
-
-    <section class="container">
-        <form id="my-form">
-            <h1>Add User</h1>
-            <div>
-                <label for="name">Name:</label>
-                <input type="text" id="name" />
+    <div class="login-container">
+        <h1>Login</h1>
+        <form id="loginForm">
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" id="username" placeholder="Type your username" required>
             </div>
-            <div>
-                <label for="email">Email:</label>
-                <input type="text" id="email" />
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" id="password" placeholder="Type your password" required>
             </div>
-            <input class="btn" type="submit" value="Submit" />
+            <div class="forgot-password">
+                <a href="#">Forgot password?</a>
+            </div>
+            <button type="submit" class="login-btn">LOGIN</button>
         </form>
 
-        <ul id="users"></ul>
-    </section>
+        <div class="social-login">
+            <p>Or Sign Up Using</p>
+            <div class="social-icons">
+                <button class="facebook"><i class="fab fa-facebook-f"></i></button>
+                <button class="twitter"><i class="fab fa-twitter"></i></button>
+                <button class="google"><i class="fab fa-google"></i></button>
+                <button class="whatsapp"><i class="fab fa-whatsapp"></i></button>
+                <button class="linkedin"><i class="fab fa-linkedin-in"></i></button>
+                <button class="github"><i class="fab fa-github"></i></button>
+            </div>
+        </div>
 
-    <!--  Custom Alert Box -->
-    <div id="custom-alert">
-        <div class="alert-box">
-            <p id="alert-message"></p>
-            <button onclick="closeAlert()">OK</button>
+        <div class="signup-link">
+            <p>Or Sign Up Using</p>
+            <a href="#">SIGN UP</a>
         </div>
     </div>
 
+    <div id="custom-alert" class="hidden">Form successfully submitted!</div>
     <script src="src/main.js"></script>
 </body>
 </html>

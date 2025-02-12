@@ -1,49 +1,37 @@
-document.getElementById("my-form").addEventListener("submit", function (e) {
-  e.preventDefault(); // stop Page reload 
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const username = document.getElementById('username');
+    const password = document.getElementById('password');
 
-  let name = document.getElementById("name").value.trim();
-  let email = document.getElementById("email").value.trim();
+    // Basic validation
+    if (username.value.trim() === '' || password.value.trim() === '') {
+        showAlert('Please fill in all fields', 'error');
+        return;
+    }
 
-  if (name === "" || email === "") {
-    showAlert("⚠️ Enter both Name and Email!", "error");
-  } else if (!validateEmail(email)) {
-    showAlert("⚠️ Enter a valid Email!", "error");
-  } else {
-    showAlert(
-      `✅ Name: ${name}<br>✅ Email: ${email}<br>Submitted successfully! 🎉`,
-      "success"
-    );
+    // Show success message
+    showAlert('Form successfully submitted!', 'success');
 
-    // Input Fields Clear 
-    document.getElementById("name").value = "";
-    document.getElementById("email").value = "";
-  }
+    // Clear the form
+    username.value = '';
+    password.value = '';
 });
 
-// Custom Alert Function
+// Function to show alert
 function showAlert(message, type) {
-  let alertBox = document.getElementById("custom-alert");
-  let alertMessage = document.getElementById("alert-message");
+    const alertBox = document.getElementById('custom-alert');
+    alertBox.textContent = message;
+    
+    if (type === 'error') {
+        alertBox.style.background = '#f44336';
+    } else {
+        alertBox.style.background = '#4caf50';
+    }
 
-  alertMessage.innerHTML = message;
-  alertBox.style.display = "block"; // show Alert 
-  alertBox.classList.add("show");
+    alertBox.classList.add('show');
 
-  if (type === "error") {
-    alertBox.style.border = "2px solid #FF4B2B";
-  } else {
-    alertBox.style.border = "2px solid #00D1FF";
-  }
-}
-
-//  Email Validation Function
-function validateEmail(email) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-}
-
-//  Close Alert Function
-function closeAlert() {
-  let alertBox = document.getElementById("custom-alert");
-  alertBox.classList.remove("show");
-  alertBox.style.display = "none"; // Alert Hide 
+    setTimeout(() => {
+        alertBox.classList.remove('show');
+    }, 3000);
 }
