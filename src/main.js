@@ -11,7 +11,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
         return;
     }
 
-    // Show success message alert alert
+    // Show success message alert
     showAlert('Form successfully submitted!', 'success');
 
     // Clear the form
