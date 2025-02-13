@@ -3,6 +3,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     
     const username = document.getElementById('username');
     const password = document.getElementById('password');
+    const alertBox = document.getElementById('custom-alert');
 
     // Basic validation
     if (username.value.trim() === '' || password.value.trim() === '') {
@@ -10,7 +11,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
         return;
     }
 
-    // Show success message
+    // Show success message alert
     showAlert('Form successfully submitted!', 'success');
 
     // Clear the form

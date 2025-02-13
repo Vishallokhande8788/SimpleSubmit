@@ -1,49 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="ss.jpg" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="ss.jpg" type="image/x-icon" />
     <title>Login Form</title>
-    <link rel="stylesheet" href="src/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="src/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
     <div class="login-container">
-        <h1>Login</h1>
-        <form id="loginForm">
-            <div class="form-group">
-                <label>Username</label>
-                <input type="text" id="username" placeholder="Type your username" required>
-            </div>
-            <div class="form-group">
-                <label>Password</label>
-                <input type="password" id="password" placeholder="Type your password" required>
-            </div>
-            <div class="forgot-password">
-                <a href="#">Forgot password?</a>
-            </div>
-            <button type="submit" class="login-btn">LOGIN</button>
-        </form>
-
-        <div class="social-login">
-            <p>Or Sign Up Using</p>
-            <div class="social-icons">
-                <button class="facebook"><i class="fab fa-facebook-f"></i></button>
-                <button class="twitter"><i class="fab fa-twitter"></i></button>
-                <button class="google"><i class="fab fa-google"></i></button>
-                <button class="linkedin"><i class="fab fa-linkedin-in"></i></button>
-                <button class="github"><i class="fab fa-github"></i></button>
-            </div>
+      <h1>Login</h1>
+      <form id="loginForm">
+        <div class="form-group">
+          <label>Username</label>
+          <input
+            type="text"
+            id="username"
+            placeholder="Type your username"
+            required
+          />
         </div>
-
-        <div class="signup-link">
-            <p>Or Sign Up Using</p>
-            <a href="#">SIGN UP</a>
+        <div class="form-group">
+          <label>Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Type your password"
+            required
+          />
         </div>
+        <div class="forgot-password">
+          <a href="#">Forgot password ?</a>
+        </div>
+        <button type="submit" class="login-btn">LOGIN</button>
+      </form>
+
+      <div class="social-login">
+        <p>Or Sign Up Using</p>
+        <div class="social-icons">
+          <button class="facebook"><i class="fab fa-facebook-f"></i></button>
+          <button class="twitter"><i class="fab fa-twitter"></i></button>
+          <button class="google"><i class="fab fa-google"></i></button>
+          <button class="linkedin"><i class="fab fa-linkedin-in"></i></button>
+          <button class="github"><i class="fab fa-github"></i></button>
+        </div>
+      </div>
+
+      <div class="signup-link">
+        <p>Or Sign Up Using</p>
+        <a href="#">SIGN UP</a>
+      </div>
     </div>
 
-    <div id="custom-alert" class="hidden">Form successfully submitted!</div>
+    <!-- Custom Alert Box -->
+    <div id="custom-alert" class="hidden">Form successfully submitted !</div>
+
     <script src="src/main.js"></script>
-</body>
+  </body>
 </html>
