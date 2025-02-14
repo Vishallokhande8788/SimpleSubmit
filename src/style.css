@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Roboto, sans-serif;
+  font-family: "Segoe UI", Roboto, sans-serif;
 }
 
 body {
@@ -11,12 +11,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(45deg, #2196f3, #e91e63);
+  background: linear-gradient(45deg, #1976d2, #d81b60);
 }
 
 /* Login Container */
 .login-container {
-  background: white;
+  /* background: white; */
+  /* background: linear-gradient(45deg, #ADDDFE, #F7B2D8); */
+  background-color:silver;
+
   padding: 40px;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -115,12 +118,24 @@ body {
 }
 
 /* Individual Icon Colors */
-.facebook { background: #3b5998; }
-.twitter { background: #1da1f2; }
-.google { background: #db4437; }
-.whatsapp { background: #25D366; }
-.linkedin { background: #0077b5; }
-.github { background: #333; }
+.facebook {
+  background: #3b5998;
+}
+.twitter {
+  background: #1da1f2;
+}
+.google {
+  background: #db4437;
+}
+.whatsapp {
+  background: #25d366;
+}
+.linkedin {
+  background: #0077b5;
+}
+.github {
+  background: #333;
+}
 
 /* Signup Link */
 .signup-link {
@@ -150,4 +165,80 @@ body {
 
 #custom-alert.show {
   opacity: 1;
+}
+/* Animated Border */
+@keyframes borderAnimation {
+  0% {
+    border-image-source: linear-gradient(
+      45deg,
+      #1a1a1a,
+      #3b5998,
+      #ff4500,
+      white
+    );
+  }
+  25% {
+    border-image-source: linear-gradient(
+      45deg,
+      #3b5998,
+      #ff4500,
+      #4b0082,
+      #ffeb00
+    );
+  }
+  50% {
+    border-image-source: linear-gradient(
+      45deg,
+      #ff4500,
+       white
+      #ffeb00,
+      #0f0f0f
+    );
+  }
+  75% {
+    border-image-source: linear-gradient(
+      45deg,
+      #4b0082,
+      #ffeb00,
+      #0f0f0f,
+      #2c3e50
+    );
+  }
+  100% {
+    border-image-source: linear-gradient(
+      45deg,
+      #ffeb00,
+      #0f0f0f,
+      #2c3e50,
+      #ff0073
+    );
+  }
+
+}
+
+@keyframes glowingBorder {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 69, 0, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(72, 61, 139, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 69, 0, 0.6);
+  }
+}
+
+.login-container {
+  border: 10px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    45deg,
+    #1a1a1a,
+    #3b5998,
+    #ff4500,
+    #4b0082
+  );
+  animation: borderAnimation 2s infinite linear,
+    glowingBorder 5s infinite alternate;
+  transition: all 0.5s ease-in-out;
 }
